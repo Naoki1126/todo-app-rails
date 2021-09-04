@@ -1,0 +1,257 @@
+"pkg-config --exists openssl"
+| pkg-config --libs openssl
+=> "-lssl -lcrypto  \n"
+"gcc -std=gnu99 -o conftest -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/x86_64-linux -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/ruby/backward -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0 -I. -I/home/vagrant/.rbenv/versions/3.0.0/include    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC conftest.c  -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L/home/vagrant/.rbenv/versions/3.0.0/lib -lruby  -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+"gcc -std=gnu99 -o conftest -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/x86_64-linux -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/ruby/backward -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0 -I. -I/home/vagrant/.rbenv/versions/3.0.0/include    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC conftest.c  -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L/home/vagrant/.rbenv/versions/3.0.0/lib -lruby -lssl -lcrypto -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+| pkg-config --cflags-only-I openssl
+=> " \n"
+| pkg-config --cflags-only-other openssl
+=> " \n"
+| pkg-config --libs-only-l openssl
+=> "-lssl -lcrypto  \n"
+package configuration for openssl
+incflags: 
+cflags: 
+ldflags: 
+libs: -lssl -lcrypto
+
+have_header: checking for openssl/bio.h... -------------------- yes
+
+"gcc -std=gnu99 -E -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/x86_64-linux -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/ruby/backward -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0 -I.  -I/home/vagrant/.rbenv/versions/3.0.0/include    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC   conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <openssl/bio.h>
+/* end */
+
+--------------------
+
+have_func: checking for DTLS_method() in openssl/ssl.h... -------------------- yes
+
+"gcc -std=gnu99 -o conftest -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/x86_64-linux -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/ruby/backward -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0 -I.  -I/home/vagrant/.rbenv/versions/3.0.0/include    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC  conftest.c  -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic      -lssl -lcrypto -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L/home/vagrant/.rbenv/versions/3.0.0/lib -lruby  -lssl -lcrypto -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <openssl/ssl.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: int t(void) { void ((*volatile p)()); p = (void ((*)()))DTLS_method; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for TLS_server_method() in openssl/ssl.h... -------------------- no
+
+"gcc -std=gnu99 -o conftest -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/x86_64-linux -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/ruby/backward -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0 -I.  -I/home/vagrant/.rbenv/versions/3.0.0/include    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC  conftest.c  -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic      -lssl -lcrypto -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L/home/vagrant/.rbenv/versions/3.0.0/lib -lruby  -lssl -lcrypto -lm   -lc"
+conftest.c: 関数 ‘t’ 内:
+conftest.c:16:57: エラー: ‘TLS_server_method’ が宣言されていません (この関数内での最初の使用)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))TLS_server_method; return !p; }
+                                                         ^
+conftest.c:16:57: 備考: 未宣言の識別子は出現した各関数内で一回のみ報告されます
+conftest.c: トップレベル:
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-tautological-compare" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-self-assign" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-parentheses-equality" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-constant-logical-operand" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-cast-function-type" です [デフォルトで有効]
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <openssl/ssl.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: int t(void) { void ((*volatile p)()); p = (void ((*)()))TLS_server_method; return !p; }
+/* end */
+
+"gcc -std=gnu99 -o conftest -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/x86_64-linux -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/ruby/backward -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0 -I.  -I/home/vagrant/.rbenv/versions/3.0.0/include    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC  conftest.c  -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic      -lssl -lcrypto -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L/home/vagrant/.rbenv/versions/3.0.0/lib -lruby  -lssl -lcrypto -lm   -lc"
+/tmp/cciI3RjE.o: 関数 `t' 内:
+/home/vagrant/work/todo-app-rails/vendor/bundle/ruby/3.0.0/gems/puma-5.4.0/ext/puma_http11/conftest.c:17: `TLS_server_method' に対する定義されていない参照です
+collect2: エラー: ld はステータス 1 で終了しました
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <openssl/ssl.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: extern void TLS_server_method();
+17: int t(void) { TLS_server_method(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for SSL_CTX_set_min_proto_version(NULL, 0) in openssl/ssl.h... -------------------- no
+
+"gcc -std=gnu99 -o conftest -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/x86_64-linux -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/ruby/backward -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0 -I.  -I/home/vagrant/.rbenv/versions/3.0.0/include    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC  conftest.c  -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic      -lssl -lcrypto -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L/home/vagrant/.rbenv/versions/3.0.0/lib -lruby  -lssl -lcrypto -lm   -lc"
+conftest.c: 関数 ‘t’ 内:
+conftest.c:17:1: 警告: 関数 ‘SSL_CTX_set_min_proto_version’ の暗黙的な宣言です [-Wimplicit-function-declaration]
+ int t(void) { SSL_CTX_set_min_proto_version(NULL, 0); return 0; }
+ ^
+conftest.c: トップレベル:
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-tautological-compare" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-self-assign" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-parentheses-equality" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-constant-logical-operand" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-cast-function-type" です [デフォルトで有効]
+/tmp/ccXSLjYO.o: 関数 `t' 内:
+/home/vagrant/work/todo-app-rails/vendor/bundle/ruby/3.0.0/gems/puma-5.4.0/ext/puma_http11/conftest.c:17: `SSL_CTX_set_min_proto_version' に対する定義されていない参照です
+collect2: エラー: ld はステータス 1 で終了しました
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <openssl/ssl.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: 
+17: int t(void) { SSL_CTX_set_min_proto_version(NULL, 0); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for X509_STORE_up_ref()... -------------------- no
+
+"gcc -std=gnu99 -o conftest -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/x86_64-linux -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/ruby/backward -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0 -I.  -I/home/vagrant/.rbenv/versions/3.0.0/include    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC  conftest.c  -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic      -lssl -lcrypto -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L/home/vagrant/.rbenv/versions/3.0.0/lib -lruby  -lssl -lcrypto -lm   -lc"
+conftest.c: 関数 ‘t’ 内:
+conftest.c:14:57: エラー: ‘X509_STORE_up_ref’ が宣言されていません (この関数内での最初の使用)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))X509_STORE_up_ref; return !p; }
+                                                         ^
+conftest.c:14:57: 備考: 未宣言の識別子は出現した各関数内で一回のみ報告されます
+conftest.c: トップレベル:
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-tautological-compare" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-self-assign" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-parentheses-equality" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-constant-logical-operand" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-cast-function-type" です [デフォルトで有効]
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))X509_STORE_up_ref; return !p; }
+/* end */
+
+"gcc -std=gnu99 -o conftest -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/x86_64-linux -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/ruby/backward -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0 -I.  -I/home/vagrant/.rbenv/versions/3.0.0/include    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC  conftest.c  -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic      -lssl -lcrypto -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L/home/vagrant/.rbenv/versions/3.0.0/lib -lruby  -lssl -lcrypto -lm   -lc"
+/tmp/ccL0JS05.o: 関数 `t' 内:
+/home/vagrant/work/todo-app-rails/vendor/bundle/ruby/3.0.0/gems/puma-5.4.0/ext/puma_http11/conftest.c:15: `X509_STORE_up_ref' に対する定義されていない参照です
+collect2: エラー: ld はステータス 1 で終了しました
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void X509_STORE_up_ref();
+15: int t(void) { X509_STORE_up_ref(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for SSL_CTX_set_ecdh_auto(NULL, 0) in openssl/ssl.h... -------------------- yes
+
+"gcc -std=gnu99 -o conftest -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/x86_64-linux -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0/ruby/backward -I/home/vagrant/.rbenv/versions/3.0.0/include/ruby-3.0.0 -I.  -I/home/vagrant/.rbenv/versions/3.0.0/include    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC  conftest.c  -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L. -L/home/vagrant/.rbenv/versions/3.0.0/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic      -lssl -lcrypto -Wl,-rpath,/home/vagrant/.rbenv/versions/3.0.0/lib -L/home/vagrant/.rbenv/versions/3.0.0/lib -lruby  -lssl -lcrypto -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <openssl/ssl.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: 
+17: int t(void) { SSL_CTX_set_ecdh_auto(NULL, 0); return 0; }
+/* end */
+
+--------------------
+

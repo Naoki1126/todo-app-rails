@@ -1,0 +1,28 @@
+current directory: /home/vagrant/work/todo-app-rails/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.8.1/ext/bootsnap
+/home/vagrant/.rbenv/versions/3.0.0/bin/ruby -I /home/vagrant/.rbenv/versions/3.0.0/lib/ruby/3.0.0 -r ./siteconf20210904-8161-fvydjg.rb extconf.rb
+creating Makefile
+
+current directory: /home/vagrant/work/todo-app-rails/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.8.1/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/vagrant/work/todo-app-rails/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.8.1/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c: 関数 ‘bs_rb_fetch’ 内:
+bootsnap.c:742:13: 警告: ‘output_data’ はこの関数内初期化されずに使用されるかもしれません [-Wmaybe-uninitialized]
+     else if (!NIL_P(output_data)) goto succeed; /* fast-path, goal */
+             ^
+bootsnap.c:705:9: 備考: ‘output_data’ はここで定義されています
+   VALUE output_data;  /* return data, e.g. ruby hash or loaded iseq */
+         ^
+bootsnap.c: トップレベル:
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-tautological-compare" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-self-assign" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-parentheses-equality" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-constant-logical-operand" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-cast-function-type" です [デフォルトで有効]
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/vagrant/work/todo-app-rails/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.8.1/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20210904-8161-pbyi6j/bootsnap
