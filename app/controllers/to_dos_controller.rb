@@ -1,5 +1,5 @@
 class ToDosController < ApplicationController
-    before_action :set_to_do, only: [:edit, :update]
+    before_action :set_to_do, only: [:edit, :update, :destroy]
     def index
         @to_dos = ToDo.all
     end
@@ -9,7 +9,7 @@ class ToDosController < ApplicationController
     end
 
     def create
-        @to_do = Todo.new(to_do_params)
+        @to_do = ToDo.new(to_do_params)
         if @to_do.save
             redirect_to root_path and return
         end
@@ -30,14 +30,13 @@ class ToDosController < ApplicationController
      end
 
      def destroy
-        @to_do = ToDo.find_by(id: params[:id])
         @to_do.destroy
         redirect_to to_dos_url
       end
 
     private
     def to_do_params
-        params.require(:to_do).permit(:title)
+        params.require(:to_do).permit(:title,:expired_at)
     end
 
     def set_to_do
